@@ -1,0 +1,169 @@
+*{
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+   
+}
+html{
+    font-size: 62.5%;
+}
+h1{
+    text-align: center;
+    font-size: 4.7rem;
+    transition: all .5s ease;
+    position: absolute;
+    margin-left: 20rem;
+}
+p{
+    
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    font-size: 1.6rem;
+    font-style: italic;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 70rem;
+    height: 40rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    padding: 1.2rem;
+    border-radius: 12px;
+    background-color: rgb(250, 239, 241);
+    transition: all 1s ease-in;
+
+}
+
+.container::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.5rem;
+    content: '';
+    background-color:black;
+}
+.milieu{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: auto auto;
+}
+input{
+    /* margin-top: 3rem; */
+    /* display: block; */
+    border-radius: 0.2rem;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    border-bottom: 1px solid;
+
+}
+input:hover{
+    border-top: 1 solid;
+    /* background-color: black; */
+}
+input[type='file']{
+    float: right;
+    margin-bottom: 1.4rem;
+}
+label{
+    font-size: 1.4rem;
+}
+.content1{
+    margin: 0 2rem;
+}
+
+.table1{
+    border-collapse: separate;
+    border-spacing: 1.3rem;
+}
+input[type="submit"]{
+    float: right;
+    padding: 0.5rem 1rem;
+    background-color: pink;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+span{
+    /*display: inline-block;
+    margin-left: 20rem;*/
+    font-size: 1.4rem
+}
+
+input[type="submit"]:hover{
+    background-color: gray;
+}
+h1::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0.3rem;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.7s ease-in;
+}
+.container:hover h1::before{
+    width: 100%;
+}
+
+.table2{
+    border-collapse: collapse;
+    border: 1px solid;
+    border-style: solid;
+    border-width: 2px;
+    width: 95rem;
+    height: auto;
+    margin: 0 auto;
+    background-color: pink;
+    text-align-last: center;
+    /* padding: 10px; */
+
+}
+.table2 td{
+    border: 1px solid;
+    font-size: 1.4rem;
+    color: white;
+}
+.table2 th{
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 1rem;
+
+}
+button{
+    cursor: pointer;
+    color: blue;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: transparent;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+

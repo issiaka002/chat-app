@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            
+            width: 500px;
+            height: 300px;
+            
+            text-align: center;
+            background-color: palevioletred;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto auto;
+            margin-top: 500px;
+        }
+        .message{
+            visibility: hidden;
+        }
+        .visible{
+            visibility: visible;
+        }
+        
+        .rond{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: pink;
+        }
+        nav{
+            position: fixed;
+            background-color: aqua;
+            width: 100vw;
+            height: 50px;
+            z-index: 500;
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+            top: -50px;
+            left: 0;
+            transition: all 0.7s ease-in;
+            margin-bottom: 55px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        li{
+            list-style: none;
+        }
+        #nom{
+            margin-left: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li>Acceuil</li>
+            <li>Services</li>
+            <li>Contacts</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <button id="afficher">afficher</button>
+        <button id="cacher">cacher</button>
+        <p class="message">c'est moi le message caché !!! </p>
+        <p class="foo"></p>
+    </div>
+
+    <div class="rond">
+
+    </div>
+    <div class="rien"></div>
+    <div class="inp">
+        <form action="">
+            <input type="text" name="nom" id="nom">
+        </form>
+    </div>
+    <script>
+        const btn_afficher = document.querySelector('#afficher')
+        const message = document.querySelector(".message")
+        const btn_cacher = document.getElementById('cacher')
+        const mes = document.querySelector('.foo')
+        
+        btn_afficher.addEventListener('click', (e)=>{
+            message.classList.toggle('visible')
+
+        })
+        window.addEventListener('keypress', (e)=>{
+            mes.textContent = "vous avez appuyer sur la touche: " + e.key +" son code est: "+ e.keyCode
+            
+        })
+
+        const rond = document.querySelector('.rond')
+        window.addEventListener('mouseover', (e)=>{
+            
+        })
+        const nav = document.getElementById('nav')
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY>250){
+                nav.style.top = "0"
+            }else{
+                nav.style.top = "-50px"
+            }
+        })
+
+        //const inpp = document.querySelector('input')
+        //inpp.addEventListener("input", (e)=>{
+        //    let valeur = e.target.value
+        //})
+
+       
+
+        btn_cacher.addEventListener('click', ()=>{
+            setTimeout(()=>{
+                mes.innerHTML +=`<h1>REDIS</h1>`
+            }, 1000)
+           
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>
